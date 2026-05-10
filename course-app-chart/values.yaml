@@ -1,0 +1,20 @@
+replicaCount: 3
+
+image:
+  repository: djmen12/course-app
+  tag: latest
+  pullPolicy: Always
+
+service:
+  type: ClusterIP
+  port: 8080
+  targetPort: 8080
+
+ingress:
+  enabled: true
+  className: nginx
+  host: course-app.local
+
+env:
+  APP_STORE: redis
+  APP_REDIS_URL: redis://redis-master:6379
