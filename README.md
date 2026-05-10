@@ -236,7 +236,7 @@ course-app-course-app   nginx   course-app.local             80      8m17s
 ## 7. Перевірка застосунку
 
 ```bash
-kubectl port-forward service/course-app-course-app-chart 8080:8080
+kubectl port-forward service/course-app-course-app 8080:8080
 Forwarding from 127.0.0.1:8080 -> 8080
 Forwarding from [::1]:8080 -> 8080
 Handling connection for 8080
